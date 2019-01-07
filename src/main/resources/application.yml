@@ -1,0 +1,20 @@
+micronaut:
+    application:
+        name: simple-crud
+    # If the environment variables are not defined Micronaut will use the default values
+datasources:
+    default:
+        url: ${JDBC_URL:`jdbc:h2:mem:default;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE`}
+        username: ${JDBC_USER:sa}
+        password: ${JDBC_PASSWORD:""}
+        driverClassName: ${JDBC_DRIVER:org.h2.Driver}
+jpa:
+    default:
+        # Entities are scanned in the package example.micronaut.domain.
+        packages-to-scan:
+            - 'simple.crud'
+        properties:
+            hibernate:
+                hbm2ddl:
+                    auto: update
+                show_sql: true

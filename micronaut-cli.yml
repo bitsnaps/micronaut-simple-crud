@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: simple.crud
+---
+testFramework: spock
+sourceLanguage: java
