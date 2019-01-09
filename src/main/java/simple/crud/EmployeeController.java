@@ -34,12 +34,13 @@ public class EmployeeController {
 
      */
 
-    protected final EmployeeService employeeService;
+    @Inject
+    protected EmployeeService employeeService;
 
-    // constructor injection
-    public EmployeeController(EmployeeService employeeService){
-        this.employeeService = employeeService;
-    }
+    // constructor injection (replaced by @Inject)
+//    public EmployeeController(EmployeeService employeeService){
+//        this.employeeService = employeeService;
+//    }
 
     @Produces(MediaType.APPLICATION_JSON)
     @Get("/{id}")
