@@ -1,8 +1,9 @@
 plugins {
     id "io.spring.dependency-management" version "1.0.6.RELEASE"
-    id "com.github.johnrengelman.shadow" version "4.0.0"
+    // downgraded from 4.0.0 to 2.0.4 for gradle compatibility
+    id "com.github.johnrengelman.shadow" version "2.0.4"
     id "net.ltgt.apt-eclipse" version "0.18"
-    id "net.ltgt.apt-idea" version "0.18"	
+    id "net.ltgt.apt-idea" version "0.18"
 }
 
 apply plugin:"application"
